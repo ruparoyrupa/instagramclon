@@ -1,0 +1,250 @@
+
+.register-continar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top:50px ;
+ 
+
+
+
+    .register-wraper{
+        width: 350px;
+        border: 1px solid #dbdbdb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        padding-bottom: 15px;
+
+
+
+
+        .logo-link{
+            margin: 35px 0px;
+            img{
+              width: 180px;
+            }
+
+        }
+
+
+
+
+
+
+        .reg-text{
+            width: 77%;
+            font-size: 17px;
+            font-weight: 400;
+            text-align: center;
+            color: gray;
+            margin-top: -20px;
+        }
+        
+        
+        .register-with-facebook{
+        
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            word-spacing: 4px;
+            margin: 17px 0px;
+            background-color: #0095f6;
+            width: 79%;
+            text-align: center;
+            padding: 6px 0px 3px;
+            border-radius: 6px;
+        
+            .reg-btn{
+        
+                background-color: #0095f6;
+                color: #fafafa;
+                font-size: 14px;
+                font-weight: 500;
+        
+            }
+        
+        }
+        
+        
+        
+        .register-divider{
+            font-size: 14px;
+            font-weight: 400;
+            text-overflow: uppercase;
+            color: #8e8e8e;
+            background-color: #ffffff;
+        
+        
+            position: relative;
+            width: 78%;
+            text-align: center;
+        
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+                position: absolute;
+                height: 1px;
+                width: 40%;
+                background-color:#dbdbdb;
+                left: 0;
+                top: 10px;
+        
+            }
+        
+        
+            &::before{
+                content: '';
+                display: block;
+                clear: both;
+                position: absolute;
+                height: 1px;
+                width: 40%;
+                background-color: #dbdbdb;
+                right: 0;
+                top: 10px;
+        
+            }
+        
+        
+        }
+          
+        
+        
+        
+        .register-form{
+            width: 265px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            justify-content: center;
+            margin-top: 20px;
+        
+        
+            .register-input{
+                height: 38px;
+                width: 269px;
+                background-color: #fafafa;
+                padding-left: 6px;
+                font-size: 12px;
+                font-weight: 300;
+                margin-bottom: 6px;
+                border: 1px solid #d4d4d4;
+               border-radius: 4px;
+              
+            }
+        
+        
+          
+
+            .form-text{
+                padding-top: 5px;
+                background-color: #ffffff;
+              
+              
+                  .reg-form-text{
+                      width: 265px;
+                      text-align: center;
+                      font-size: 12px;
+                      font-weight: 300;
+                      color: #9c8e9c;
+                      background-color: #ffffff;
+                      margin-top: 10px;
+              
+                     a {
+                      text-decoration: none;
+                      font-weight: 500;
+                      color: #9c8e9c;
+                      font-size: 12px;
+                     }
+                }
+
+
+                .sign-up-butten{
+                    height: 35px;
+                    width: 265px;
+                    background-color: #b2dffc;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: white;
+                    margin: 5px 0px 20px;
+                    border-radius: 6px;
+                }
+              
+            }
+
+
+
+
+        
+        }
+        
+        
+    }
+
+
+    .reg-signe-up-wraper{
+        width: 350px;
+        border: 1px solid #dbdbdb;
+        background-color: #ffffff;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 400; 
+        padding: 22px 0px;
+        margin-top: 10px;
+    
+        .reg-signe-up-link{
+            text-decoration: none;
+            margin-left: 1px;
+            font-weight: 500;
+            color: #0095f6;
+        }
+       
+    
+    }
+
+     
+    
+    .get-app{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0px 5px;
+     
+
+        .app-text{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .app-img{
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+           
+
+            img{
+                height: 40px;
+            }
+        }
+      }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+.footer{
+
+   padding: 55px 0px ;
+   
+    .footer-top{
+      
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            li{
+                
+                a{
+                    text-decoration: none;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #a19ca1;
+                    
+                }
+            }
+        }
+    }
+
+
+    .footer-buttom{
+        text-align: center;
+        color: #a19ca1;
+        margin-top: 18px;
+       
+
+        select{
+            border: none;
+            font-size: 13px;
+            font-weight: 400;
+            color: #a19ca1;
+
+            option{
+                font-size: 13px;
+                font-weight: 500;
+                color: black;
+            }
+           
+        }
+    }
+
+    .copy-right-area{
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 20px;
+    }
+}
