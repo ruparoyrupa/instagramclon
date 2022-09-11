@@ -365,7 +365,7 @@ export const verifyUserAccount = async ( req , res , next ) => {
       }
 
       if ( recover_user ) {
-       const token = createToken({id : recover_user._id});
+       const token = createToken({id : recover_user._id} , '1h');
 
        const recover_url = `http://localhost:3000/recover-password/${token}` ;
 
@@ -382,17 +382,50 @@ export const verifyUserAccount = async ( req , res , next ) => {
          
       }
      
-     
-
-    
-   
-      
+        
    } catch (error) {
       next(error);
       
    }
    
   }
+
+
+
+//   password reset
+
+
+export const resetPassword = async ( req , res , next ) => {
+
+   try {
+
+      const {token } = req.body ;
+
+      // shas password
+
+      const salt = await bcrypt.genSalt(10);
+      const hash_pass = await bcrypt.hash(req.body.password , salt)
+      
+      // get user id
+
+      const {id } = jwt.verify( token , process.env.JWT_SECRET)
+
+      // change password
+
+      if (id) {
+         const user_detalis = await User.findByIdAndUpdate(id , {
+            password : hash_pass
+         })
+      }
+      res.send('Password change successfully')
+      token.remove();
+   } catch (error) {
+      next(createError(401 , 'Time Out'));
+      console.log(error);
+      
+   }
+
+}
 
 
   

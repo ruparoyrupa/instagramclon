@@ -17,6 +17,7 @@ import LoaderContext from "./context/LoaderContext";
 import { creatTost } from "./utility/Toste";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Verify from "./components/verify/Verify";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
 
 
 
@@ -109,6 +110,7 @@ function App() {
       <Route path="/" element={ <AuthenticateUser> <Home/> </AuthenticateUser> }/>
       <Route path="/user/:id/verify/:token" element={ <Verify/> }/>
       <Route path="/forgot-password" element={ <ForgotPassword/> }/>
+      <Route path="/recover-password/:token" element={ <ResetPassword/> }/>
      </Routes>
     </>
   );

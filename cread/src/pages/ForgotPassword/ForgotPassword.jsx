@@ -10,6 +10,8 @@ import swal from 'sweetalert';
 const ForgotPassword = () => {
 
   const [email , setEmail] = useState('');
+  
+  
 
   //  message state
 
@@ -29,10 +31,12 @@ const ForgotPassword = () => {
 
      await axios.post('http://localhost:5050/api/user/recover-password', {email})
      .then(res => {
-
+        
       swal("Success !", "Password recovery link send successfully !", {
         icon: "success"
       });
+
+      setEmail('');
 
      })
      .catch(error => {
@@ -43,6 +47,17 @@ const ForgotPassword = () => {
        })
      });
   }
+
+
+  // msg close heandeler
+
+  const handleMsgClose = () => {
+    setMsg({
+      type : '',
+      msg : '',
+      status : false
+    })
+  }
  
   return (
     <>
@@ -51,7 +66,7 @@ const ForgotPassword = () => {
       <h2><VscLock/></h2>
        <h5>Trobule Logging In?</h5>
        <span>Enter your email,phone, or username and we'll send you link to get back into your account</span>
-       { msg.status &&  <p className={`alert alert-${msg.type}`}>{msg.msg} <button type="button" className="btn-close" data-dismiss="alert" disabled aria-label="Close"></button></p>}
+       { msg.status &&  <p className={`alert alert-${msg.type}`}>{msg.msg} <button className="btn-close btn-sm" onClick={handleMsgClose}></button></p>}
       <form  className='password-form' onSubmit={handlePasswordRecover} method='POST'>
          <input  type="text" name='email' className='password-input' value={email} onChange={e => setEmail(e.target.value) } placeholder='phone number, username, or email' />
          <button type='submit'  className='send-link-butten'>Send Login Link</button>
