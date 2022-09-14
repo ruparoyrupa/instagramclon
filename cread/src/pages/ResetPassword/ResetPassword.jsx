@@ -9,6 +9,7 @@ import { creatTost } from '../../utility/Toste';
 
 
 
+
  
  const ResetPassword = () => {
 
@@ -48,8 +49,6 @@ import { creatTost } from '../../utility/Toste';
     const handleResetPassword = async (e) => {
       e.preventDefault();
 
-      console.log(password.npassword );
-
     try {
 
           // cheak password
@@ -81,7 +80,7 @@ import { creatTost } from '../../utility/Toste';
               setPassword('');
               creatTost('Your password changed successfully')
               navigate('/login')
-             
+              
               
             })
             .catch(error => {

@@ -3,6 +3,10 @@ import './TopBar.scss';
 import { AiOutlineSearch } from "react-icons/ai";
 import { useContext } from 'react';
 import AuthContext from '../../context/AuthContext';
+import { BsPersonCircle } from "react-icons/bs";
+import { BsBookmark } from "react-icons/bs";
+import { BsGearWide } from "react-icons/bs";
+import { BsArrowRepeat } from "react-icons/bs";
 
 
 const TopBar = () => {
@@ -39,6 +43,16 @@ const TopBar = () => {
                     </li>
                     <li>
                         <a href="#"><img src={`${user.photo ? user.photo : 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG.png'}`} alt="" /></a>
+
+                        <div className="insta-dropdown-menu shadow show-menu">
+                            <ul>
+                                <li> <BsPersonCircle/><a href="#">Profile</a></li>
+                                <li> <BsBookmark/><a href="#"> Seved</a></li>
+                                <li> <BsGearWide/><a href="#"> Settings</a></li>
+                                <li className='insta-border'> <BsArrowRepeat/><a href="#"> Switch account</a></li>
+                                <li><a href="#">Log Out</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>

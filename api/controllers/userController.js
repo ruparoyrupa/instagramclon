@@ -290,7 +290,7 @@ export const getLoggedInUser = async  (req, res, next) => {
 
             const user = await User.findById(user_logged_in.id);
             res.status(200).json(user);
-            
+           
           }
       }
 
@@ -365,14 +365,14 @@ export const verifyUserAccount = async ( req , res , next ) => {
       }
 
       if ( recover_user ) {
-       const token = createToken({id : recover_user._id} , '1h');
+       const token = createToken({id : recover_user._id} , '60s');
 
        const recover_url = `http://localhost:3000/recover-password/${token}` ;
 
-       await Token.create({
-         userId : recover_user._id,
-         token : token
-       })
+      //  await Token.create({
+      //    userId : recover_user._id,
+      //    token : token
+      //  })
 
        sendEmail( recover_user.email , 'Recover password', recover_url);
 
@@ -418,9 +418,10 @@ export const resetPassword = async ( req , res , next ) => {
          })
       }
       res.send('Password change successfully')
-      token.remove();
+      
    } catch (error) {
       next(createError(401 , 'Time Out'));
+     
       console.log(error);
       
    }
